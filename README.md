@@ -24,7 +24,8 @@ This portfolio represents the verified engineering, design, and research portfol
 
 ## 🚀 Live Demo & Repositories
 
-- **GitHub Profile**: [https://github.com/Ramseyako1212](https://github.com/Ramseyako1212)
+- **Live Portfolio Website**: [https://ramseyako1212.github.io/portfolio/](https://ramseyako1212.github.io/portfolio/)
+- **GitHub Repository**: [https://github.com/Ramseyako1212/portfolio](https://github.com/Ramseyako1212/portfolio)
 - **LinkedIn Profile**: [https://www.linkedin.com/in/ramsey-clark-c-insoma-00a1372b5](https://www.linkedin.com/in/ramsey-clark-c-insoma-00a1372b5)
 - **Flagship Live App (WashQueue)**: [https://washqueue.online](https://washqueue.online)
 - **WashQueue Admin Console**: [https://washqueue-admin.fly.dev](https://washqueue-admin.fly.dev)
