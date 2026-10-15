@@ -83,7 +83,7 @@ export const Hero: FC = () => {
 
               {/* 2. Download My Resume */}
               <a
-                href="/assets/resume/RAMSEY_CLARK_INSOMA_RESUME.pdf"
+                href="./assets/resume/RAMSEY_CLARK_INSOMA_RESUME.pdf"
                 download="RAMSEY_CLARK_INSOMA_RESUME.pdf"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-500/50 text-slate-200 hover:text-white font-semibold text-sm transition-all hover:bg-slate-800"
               >
