@@ -14,7 +14,7 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 
 export const Hero: FC = () => {
   const [profileImg, setProfileImg] = useState<string>(
-    'https://avatars.githubusercontent.com/u/190347825?v=4'
+    './assets/profile.png'
   );
 
   const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
@@ -152,9 +152,9 @@ export const Hero: FC = () => {
                   <img
                     src={profileImg}
                     alt={personalInfo.fullName}
-                    className="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      (e.target as HTMLElement).style.display = 'none';
+                      (e.target as HTMLImageElement).src = 'https://avatars.githubusercontent.com/u/190347825?v=4';
                     }}
                   />
                   {/* Photo Replacement Overlay for User */}
