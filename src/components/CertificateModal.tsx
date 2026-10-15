@@ -1,5 +1,5 @@
 import { useState, type FC } from 'react';
-import { X, ExternalLink, Download, CheckCircle2, ShieldCheck, Copy, Check } from 'lucide-react';
+import { X, ExternalLink, Download, CheckCircle2, ShieldCheck, Copy, Check, Award, FileCheck } from 'lucide-react';
 import type { Certificate } from '../types';
 
 interface CertificateModalProps {
@@ -23,7 +23,7 @@ export const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClo
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md overflow-y-auto">
       <div 
-        className="relative w-full max-w-3xl bg-[#0E131F] border border-cyan-500/30 rounded-2xl shadow-2xl overflow-hidden my-auto max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-2xl bg-[#0E131F] border border-cyan-500/30 rounded-2xl shadow-2xl overflow-hidden my-auto max-h-[90vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -77,7 +77,7 @@ export const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClo
             </div>
           )}
 
-          {/* Verified Skills */}
+          {/* Assessed Skills */}
           <div className="space-y-2">
             <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">Assessed Technical Competencies:</span>
             <div className="flex flex-wrap gap-2">
@@ -93,19 +93,46 @@ export const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClo
             </div>
           </div>
 
-          {/* Embedded PDF Viewer if available */}
-          {certificate.pdfUrl && (
-            <div className="space-y-2">
-              <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">Certificate Preview:</span>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-950 border border-white/10">
-                <iframe
-                  src={`${certificate.pdfUrl}#toolbar=0&navpanes=0`}
-                  title={certificate.title}
-                  className="w-full h-full"
-                />
-              </div>
+          {/* Official Verification Certificate Plate */}
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-cyan-500/20 text-center space-y-4">
+            <div className="w-14 h-14 mx-auto rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-glow-sm">
+              <Award className="w-7 h-7" />
             </div>
-          )}
+            
+            <div className="space-y-1">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 block font-bold">
+                Official Credential Record
+              </span>
+              <h4 className="text-base font-bold text-white">{certificate.title}</h4>
+              <p className="text-xs text-slate-400">{certificate.issuer} · {certificate.issueDate}</p>
+            </div>
+
+            {/* Document Action Buttons */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+              {certificate.pdfUrl && (
+                <>
+                  <a
+                    href={certificate.pdfUrl}
+                    download
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-semibold shadow-glow-sm hover:shadow-glow-md transition-all"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Download Certificate (PDF)</span>
+                  </a>
+                  <a
+                    href={certificate.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-semibold border border-white/10 transition-colors"
+                  >
+                    <FileCheck className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>Open in New Tab</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </>
+              )}
+            </div>
+          </div>
 
         </div>
 
@@ -113,28 +140,18 @@ export const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClo
         <div className="p-5 border-t border-white/10 bg-slate-900/80 flex items-center justify-between gap-3">
           <span className="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4" />
-            Verified Credential Record
+            Verified Authentic Record
           </span>
           <div className="flex items-center gap-3">
-            {certificate.pdfUrl && (
-              <a
-                href={certificate.pdfUrl}
-                download
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold border border-white/10 transition-colors"
-              >
-                <Download className="w-4 h-4" />
-                <span>Download PDF</span>
-              </a>
-            )}
             {certificate.credentialUrl && (
               <a
                 href={certificate.credentialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-semibold shadow-glow-sm hover:shadow-glow-md transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold border border-white/10 transition-all"
               >
                 <span>Verify with Issuer</span>
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-3.5 h-3.5" />
               </a>
             )}
           </div>

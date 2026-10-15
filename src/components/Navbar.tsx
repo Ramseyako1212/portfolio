@@ -51,7 +51,6 @@ export const Navbar: FC<NavbarProps> = ({ activeSection }) => {
                 <span>Ramsey Clark Insoma</span>
                 <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" title="Available for opportunities"></span>
               </div>
-              <p className="text-xs text-slate-400 font-mono hidden sm:block">Full-Stack & UI/UX Specialist</p>
             </div>
           </a>
 

@@ -67,13 +67,13 @@ export const projects: Project[] = [
     ],
     metrics: '32 of 32 Cypress E2E tests passed (1m 12s execution time). Live on washqueue.online & washqueue-admin.fly.dev',
     images: [
-      '/assets/projects/washqueue/image1.png',
-      '/assets/projects/washqueue/image7.png',
-      '/assets/projects/washqueue/image8.png',
-      '/assets/projects/washqueue/image10.png',
-      '/assets/projects/washqueue/image11.png',
-      '/assets/projects/washqueue/image12.png',
-      '/assets/projects/washqueue/image17.png'
+      './assets/projects/washqueue/image1.png',
+      './assets/projects/washqueue/image7.png',
+      './assets/projects/washqueue/image8.png',
+      './assets/projects/washqueue/image10.png',
+      './assets/projects/washqueue/image11.png',
+      './assets/projects/washqueue/image12.png',
+      './assets/projects/washqueue/image17.png'
     ],
     highlights: ['Capstone Defense Project', 'Live Production Deployment', 'Cypress 16.0 Automated Testing', 'Custom Regional NLP']
   },
@@ -101,9 +101,9 @@ export const projects: Project[] = [
     ],
     metrics: 'R² score of 0.84 with stable generalized variance across unseen test splits',
     images: [
-      '/assets/designs/1.png',
-      '/assets/designs/2.png',
-      '/assets/designs/3.png'
+      './assets/designs/1.png',
+      './assets/designs/2.png',
+      './assets/designs/3.png'
     ],
     highlights: ['Academic Research', 'Quantitative ML', 'Feature Engineering']
   },
@@ -129,8 +129,8 @@ export const projects: Project[] = [
       'Modular MVC architecture separating reservation business logic from presentation layer'
     ],
     images: [
-      '/assets/designs/4.png',
-      '/assets/designs/5.png'
+      './assets/designs/4.png',
+      './assets/designs/5.png'
     ],
     highlights: ['E-Commerce Architecture', 'Real-time Seat Matrix', 'Relational Transaction Locks']
   },
@@ -156,8 +156,8 @@ export const projects: Project[] = [
       'Image asset compression and secure upload handling'
     ],
     images: [
-      '/assets/designs/6.png',
-      '/assets/designs/7.png'
+      './assets/designs/6.png',
+      './assets/designs/7.png'
     ],
     highlights: ['GitHub Repository', 'Role-Based Access Control', 'Multi-Campus Workflow']
   },
@@ -183,8 +183,8 @@ export const projects: Project[] = [
       'Clean analytical dashboard powered by dynamic Chart.js canvases'
     ],
     images: [
-      '/assets/designs/8.png',
-      '/assets/designs/9.png'
+      './assets/designs/8.png',
+      './assets/designs/9.png'
     ],
     highlights: ['Financial Analytics', 'Excel Interoperability', 'Risk-to-Reward Calculator']
   },
@@ -210,8 +210,8 @@ export const projects: Project[] = [
       'Lightweight Leaflet client running smoothly even on low-bandwidth mobile connections'
     ],
     images: [
-      '/assets/designs/10.png',
-      '/assets/projects/washqueue/image17.png'
+      './assets/designs/10.png',
+      './assets/projects/washqueue/image17.png'
     ],
     highlights: ['Geospatial Coordinates', 'Haversine Algorithm', 'Lightweight Leaflet Engine']
   },
@@ -236,7 +236,7 @@ export const projects: Project[] = [
       'Fast responsive cash register layout optimized for keyboard-only input'
     ],
     images: [
-      '/assets/designs/3.png'
+      './assets/designs/3.png'
     ],
     highlights: ['GitHub Repository', 'Retail Operations', 'Stock Reconciliation']
   }
@@ -250,7 +250,7 @@ export const certificates: Certificate[] = [
     issueDate: '29 December 2025',
     credentialId: 'baf7e98a-fa09-48fb-8352-4825ea25f1fb',
     credentialUrl: 'https://www.netacad.com/',
-    pdfUrl: '/assets/certificates/Data_Science_Certificate_DICT_Cisco.pdf',
+    pdfUrl: './assets/certificates/Data_Science_Certificate_DICT_Cisco.pdf',
     category: 'ai-data',
     skills: ['Data Science Foundations', 'Exploratory Data Analysis', 'Python Analytics', 'Model Evaluation'],
     verified: true
@@ -262,7 +262,7 @@ export const certificates: Certificate[] = [
     issueDate: '13 November 2025',
     credentialId: 'f853121c-64eb-4278-b255-9ee45850d9df',
     credentialUrl: 'https://www.netacad.com/',
-    pdfUrl: '/assets/certificates/Modern_AI_Certificate_DICT_Cisco.pdf',
+    pdfUrl: './assets/certificates/Modern_AI_Certificate_DICT_Cisco.pdf',
     category: 'ai-data',
     skills: ['Artificial Intelligence', 'Machine Learning Principles', 'Neural Concepts', 'AI Ethics'],
     verified: true
@@ -274,7 +274,7 @@ export const certificates: Certificate[] = [
     issueDate: '10 March 2025',
     credentialId: 'ca9f47a6-def1-4747-aa11-e59b771929e3',
     credentialUrl: 'https://www.netacad.com/',
-    pdfUrl: '/assets/certificates/Cybersecurity_Certificate_Cisco.pdf',
+    pdfUrl: './assets/certificates/Cybersecurity_Certificate_Cisco.pdf',
     category: 'cybersecurity',
     skills: ['Network Security', 'Threat Mitigation', 'Information Privacy', 'Security Protocols'],
     verified: true
@@ -286,7 +286,7 @@ export const certificates: Certificate[] = [
     issueDate: '28 December 2025',
     credentialId: 'e3ad5da3-8931-404d-9d6b-66ec9ccd01b0',
     credentialUrl: 'https://www.netacad.com/',
-    pdfUrl: '/assets/certificates/Computer_Mobile_Devices_Certificate_DICT_Cisco.pdf',
+    pdfUrl: './assets/certificates/Computer_Mobile_Devices_Certificate_DICT_Cisco.pdf',
     category: 'literacy',
     skills: ['Hardware Architecture', 'Operating Systems', 'Device Configuration', 'Troubleshooting'],
     verified: true
@@ -351,7 +351,7 @@ export const designs: DesignProject[] = [
     description: 'Comprehensive, interactive multi-screen Figma prototype engineered with reusable UI components, autolayout, responsive constraints, and polished state transitions across customer and administration flows.',
     figmaUrl: 'https://www.figma.com/design/PGupkKPWOBTb6YQHJmoxuY/Complete-Clickable-Design',
     tool: 'Figma',
-    previewImage: '/assets/designs/1.png',
+    previewImage: './assets/designs/1.png',
     problem: 'Complex user journeys often fail in transition between conceptual wireframes and developer implementation when responsive states, modals, and interaction physics are undefined.',
     solution: 'Engineered a unified design system in Figma featuring complete clickable states, atomic components, and responsive grid rules tailored for production developer handoff.',
     features: [
@@ -373,7 +373,7 @@ export const designs: DesignProject[] = [
     description: 'Component architecture system in Figma showcasing micro-interactions, variant properties, and accessibility-compliant contrast ratios across dark and light surfaces.',
     figmaUrl: 'https://www.figma.com/design/TWYsGxrfLBUmfQGM5WnX4r/Create-Interactive-Button-Set',
     tool: 'Figma',
-    previewImage: '/assets/designs/2.png',
+    previewImage: './assets/designs/2.png',
     problem: 'Inconsistent buttons, missing focus states, and mismatched touch target sizes across screens cause user friction and accessibility violations.',
     solution: 'Constructed an atomic button and interactive component matrix incorporating WCAG 2.1 AA compliant contrast, 44px minimum mobile tap targets, and interactive variant prototypes.',
     features: [
@@ -395,7 +395,7 @@ export const designs: DesignProject[] = [
     description: 'User experience flow mapping customer discovery, booking confirmation, and feedback submission, comparing initial low-fidelity wireframes with finished high-fidelity mockups.',
     figmaUrl: 'https://www.figma.com/design/emEX54yg47gc5LmH9NWVW0/Untitled',
     tool: 'Figma',
-    previewImage: '/assets/designs/3.png',
+    previewImage: './assets/designs/3.png',
     problem: 'Users abandon multi-step appointment bookings when the flow contains cognitive friction, unclear steps, or confusing navigation.',
     solution: 'Mapped streamlined user flows with breadcrumbs, clear visual progress indicators, and intuitive visual cues before proceeding to high-fidelity visual styling.',
     features: [
